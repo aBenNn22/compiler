@@ -1,0 +1,85 @@
+int main() {
+    int i, s;
+
+    i = 1;
+    s = 1;
+  
+    while (i <= 20) {
+        i = i + 1;
+        if (i % 2 == 0) continue;
+        if (i == 9) break;
+        s = s + i;
+
+    }
+
+    putint(s);
+    return 1;
+}
+
+FUNCTION main
+v2 = 1
+v3 = 1
+LABEL label6
+IF v2 <= 20 GOTO label5
+GOTO label4
+LABEL label5
+temp5 = v2 + 1
+v2 = temp5
+temp7 = v2 % 2
+IF temp7 == 0 GOTO label9
+GOTO label8
+LABEL label9
+GOTO label6
+LABEL label8
+IF v2 == 9 GOTO label11
+GOTO label10
+LABEL label11
+GOTO label4
+LABEL label10
+temp10 = v3 + v2
+v3 = temp10
+GOTO label6
+LABEL label4
+ARG v3
+CALL putint
+RETURN 1
+LABEL label1
+
+
+FUNCTION main :
+LABEL label2 :
+  temp1 := #1
+  v2 := temp1
+  temp2 := #1
+  v3 := temp2
+LABEL label7 :
+  temp3 := #20
+  IF v2 <= temp3 GOTO label6
+  GOTO label5
+LABEL label6 :
+  temp4 := #1
+  temp5 := v2 + temp4
+  v2 := temp5
+  temp6 := #2
+  temp7 := v2 % temp6
+  temp8 := #0
+  IF temp7 == temp8 GOTO label10
+  GOTO label9
+LABEL label10 :
+  GOTO label7
+LABEL label9 :
+  temp9 := #9
+  IF v2 == temp9 GOTO label12
+  GOTO label11
+LABEL label12 :
+  GOTO label5
+LABEL label11 :
+  temp10 := v3 + v2
+  v3 := temp10
+  GOTO label7
+LABEL label5 :
+  ARG v3
+  temp11 := CALL putint
+  temp12 := #1
+  RETURN temp12
+LABEL label1 :

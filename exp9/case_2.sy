@@ -1,0 +1,97 @@
+int main(){
+    int a[9][9];
+    int i,j;
+    int n, m;
+
+    i = 0;
+    while (i < 9) {
+        j = 0;
+        while (j < 9) {
+            a[i][j] = (i+1)*(j+1);
+            putint(a[i][j]);
+            j = j + 1;
+        }
+        i = i + 1;
+    }
+    return 2;    
+}
+
+FUNCTION main
+v3 = 0
+LABEL label5 
+IF v3 < 9 GOTO label4
+GOTO label3
+LABEL label4 
+v4 = 0
+LABEL label9 
+IF v4 < 9 GOTO label8
+GOTO label7
+LABEL label8 
+temp1 = 1
+temp2 = v3 + temp1
+temp3 = 1
+temp4 = v4 + temp12
+temp5 = temp2 * temp4
+temp6 = 36
+temp7 = 4
+temp8 = v3 * temp6
+temp9 = v4 * temp7
+temp10 = temp8 + temp9
+v2[temp10] = temp5
+temp11 = 36
+temp12 = 4
+temp13= v3 * temp11
+temp14 = v4 * temp12
+temp15 = temp13 + temp14
+temp16 = v2[temp15] 
+ARG temp16
+CALL  putint
+temp17 = 1
+temp18 = v4 + temp17
+v4 = temp18
+GOTO label9
+LABEL label7 
+temp19 = 1
+temp20 = v3 + temp19
+v3 = temp20
+GOTO label5
+LABEL label3 
+temp21 = 2
+RETURN temp21
+LABEL label1 
+
+FUNCTION main :
+LABEL label2 :
+LABEL label3 :
+LABEL label4 :
+  temp1 := #0
+  v3 := temp1
+LABEL label8 :
+  temp2 := #9
+  IF v3 < temp2 GOTO label7
+  GOTO label6
+LABEL label7 :
+  temp3 := #0
+  v4 := temp3
+LABEL label12 :
+  temp4 := #9
+  IF v4 < temp4 GOTO label11
+  GOTO label10
+LABEL label11 :
+  temp5 :=  * 
+  v2[] := temp5
+  ARG v2
+  temp6 := CALL putint
+  temp7 := #1
+  temp8 := v4 + temp7
+  v4 := temp8
+  GOTO label12
+LABEL label10 :
+  temp9 := #1
+  temp10 := v3 + temp9
+  v3 := temp10
+  GOTO label8
+LABEL label6 :
+  temp11 := #2
+  RETURN temp11
+LABEL label1 :

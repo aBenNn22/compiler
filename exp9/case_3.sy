@@ -1,0 +1,46 @@
+int fibo(int a) {
+    if (a == 1 || a == 2) 
+        return 1;
+    return fibo(a - 1) + fibo(a - 2);
+}
+
+int main() {
+    int a;
+    a = getint();
+    if (a > 0) putint(fibo(a));
+    return 3;
+}
+
+
+FUNCTION fibo
+PARAM v2
+IF v2 == 1 GOTO label3
+GOTO label4
+LABEL label4
+IF v2 == 2 GOTO label3
+GOTO label2
+LABEL label3
+RETURN 1
+LABEL label2
+temp5 = v2 - 1
+ARG temp5
+temp6 = CALL fibo
+temp8 = v2 - 2
+ARG temp8
+temp9 = CALL fibo
+temp10 = temp6 + temp9
+RETURN temp10
+LABEL label1
+FUNCTION main
+temp11 = CALL getint
+v4 = temp11
+IF v4 > 0 GOTO label8
+GOTO label7
+LABEL label8
+ARG v4
+temp13 = CALL fibo
+ARG temp13
+CALL putint
+LABEL label7
+RETURN 3
+LABEL label5

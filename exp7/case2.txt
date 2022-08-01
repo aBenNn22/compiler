@@ -1,0 +1,43 @@
+FUNCTION main
+v3 = 0
+LABEL label5 
+IF v3 < 9 GOTO label4
+GOTO label3
+LABEL label4 
+v4 = 0
+LABEL label9 
+IF v4 < 9 GOTO label8
+GOTO label7
+LABEL label8 
+temp1 = 1
+temp2 = v3 + temp1
+temp3 = 1
+temp4 = v4 + temp12
+temp5 = temp2 * temp4
+temp6 = 36
+temp7 = 4
+temp8 = v3 * temp6
+temp9 = v4 * temp7
+temp10 = temp8 + temp9
+v2[temp10] = temp5
+temp11 = 36
+temp12 = 4
+temp13= v3 * temp11
+temp14 = v4 * temp12
+temp15 = temp13 + temp14
+temp16 = v2[temp15] 
+ARG temp16
+CALL  putint
+temp17 = 1
+temp18 = v4 + temp17
+v4 = temp18
+GOTO label9
+LABEL label7 
+temp19 = 1
+temp20 = v3 + temp19
+v3 = temp20
+GOTO label5
+LABEL label3 
+temp21 = 2
+RETURN temp21
+LABEL label1
